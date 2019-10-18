@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { withFormik, Form, Field } from "formik";
-import * as Yup from "yup";
+import { Route } from 'react-router-dom';
 import axios from "axios";
 import styled from 'styled-components';
 import Header from "./components/Header.js";
 import CharacterList from './components/CharacterList.js';
+import WelcomePage from './components/WelcomePage.js';
 
 
 export default function App() {
   return (
     <main>
       <Header />
-      <CharacterList />
+      <Route exact path="/" render={props => <WelcomePage {...props} /> } />
+      <Route path="/Characters" render={props => <CharacterList {...props} /> } />
     </main>
   );
 }
