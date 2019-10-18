@@ -15,10 +15,10 @@ export default function CharacterList(props) {
       axios
         .get('https://rickandmortyapi.com/api/character/')
         .then(response => {
-          console.log(response);
-          console.log(response.data.results);
+          // console.log(response);
+          // console.log(response.data.results);
           setCharacters(response.data.results.slice(0));
-          console.log(characters);
+          // console.log(characters);
         })
         .catch(error => {
           console.error('Server Error', error);
@@ -27,13 +27,13 @@ export default function CharacterList(props) {
     getMovies();
   }, []);
   const buttonIncFunc = () => {
-    console.log(currentChar);
+    // console.log(currentChar);
     if (currentChar < characters.length){
       setCurrentChar(currentChar+1);
     }
   };
   const buttonDecFunc = () => {
-    console.log(currentChar);
+    // console.log(currentChar);
     if (currentChar > 1){
       setCurrentChar(currentChar-1);
     }

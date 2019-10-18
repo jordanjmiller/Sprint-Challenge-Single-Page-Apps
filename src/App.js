@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
-import axios from "axios";
-import styled from 'styled-components';
 import Header from "./components/Header.js";
 import CharacterList from './components/CharacterList.js';
 import WelcomePage from './components/WelcomePage.js';
