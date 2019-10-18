@@ -41,7 +41,7 @@ export default function CharacterList(props) {
 
   return (
     <>
-    <SearchForm characters={characters}/>
+    <SearchForm characters={characters} currentChar={currentChar} setCurrentChar={setCurrentChar}/>
     <section className="character-list">
       <button onClick={buttonDecFunc}>Previous</button><button onClick={buttonIncFunc}>Next</button>
       {/* {characters.map((char, index) => {
